@@ -1,0 +1,55 @@
+@import 'colours';
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import 'homepage.scss';
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.site-wrapper {
+  min-height: 1000px;
+  margin-bottom: -5rem;
+}
+
+header {
+  background-color: map-get($colours, black);
+  color: map-get($colours, white);
+  border: none;
+  width: 100%;
+  height: 100px;
+  #main-logo {
+    display: block;
+    background: image-url('museum_logo.jpg') no-repeat;
+    height: 10rem;
+    margin-left: 15px;
+  }
+  ul {
+    text-align: center;
+    margin-top: 1.4rem;
+  }
+  li {
+    text-decoration: none;
+    color: map-get($colours, white);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-right: 2px solid map-get($colours, monk-red);
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+footer {
+  color: map-get($colours, white);
+  background-color: map-get($colours, black);
+  width: 100%;
+  height: 5rem;
+  text-align: right;
+  p {
+    margin-bottom: 0px;
+    padding: 15px;
+    span {
+      color: map-get($colours, monk-red);
+    }
+  }
+}

@@ -6,9 +6,44 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <!-- <div class="site-wrapper"> -->
+        <header>
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <%= link_to root_url, class: "logo" do %>
+                <i id="main-logo"></i>
+              <% end %>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <ul class="menu">
+                <li>ABOUT</li>
+                <li>SHOP</li>
+                <li>SIGN IN</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <%= yield %>
+        </main>
+      <!-- </div> -->
+
+      <div class="container">
+        <footer>
+          <i id="facebook"></i>
+          <i id="twitter"></i>
+          <p><span>&#169;</span> 2017 World Museum Hoddesdon</p>
+        </footer>
+      </div>
+
+    </div>
+
   </body>
 </html>

@@ -1,0 +1,61 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  background-color: map-get($colours, black) !important;
+  color: map-get($colours, white) !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  h1 {
+    color: map-get($colours, gold) !important;
+  }
+  h2 {
+    color: map-get($colours, monk-red) !important;
+  }
+  p {
+    display: inline-block;
+    font-size: 18px !important;
+    margin-top: 5rem;
+    margin-right: 3rem;
+    padding: 1rem 2rem;
+    border: 1px solid map-get($colours, white);
+  }
+  a {
+    color: map-get($colours, white);
+  }
+  a:hover {
+    color: map-get($colours, gold);
+  }
+}
+
+.main {
+  background-color: map-get($colours, black);
+  padding: 5rem 25rem;
+  color: map-get($colours, white);
+  h3 {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: map-get($colours, monk-red);
+  }
+  p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    span {
+      color: map-get($colours, gold);
+    }
+  }
+}
+
+.carousel {
+  background-color: map-get($colours, black);
+  .carousel-inner {
+    display: inline-block;
+  }
+}
+
+.contact-info {
+  height: 200px;
+  background-color: map-get($colours, black);
+}
