@@ -12,36 +12,34 @@
 
   <body>
     <div class="container">
-      <!-- <div class="site-wrapper"> -->
-        <header>
-          <div class="row">
-            <div class="col-md-8 col-sm-12">
-              <%= link_to root_url, class: "logo" do %>
-                <i id="main-logo"></i>
-              <% end %>
-            </div>
-            <div class="col-md-4 col-sm-12">
-              <ul class="menu">
-                <li>ABOUT</li>
-                <li>SHOP</li>
-                <li>SIGN IN</li>
-              </ul>
-            </div>
+
+      <header>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <%= link_to root_url, class: "logo" do %>
+              <i id="main-logo"></i>
+            <% end %>
           </div>
-        </header>
+          <div class="col-md-6 col-sm-12">
+            <ul class="menu">
+              <li><%= link_to "HOME", root_url %></li>
+              <li><%= link_to "ABOUT", about_path %></li>
+              <li>SHOP</li>
+              <li>SIGN IN</li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-        <main>
-          <%= yield %>
-        </main>
-      <!-- </div> -->
+      <main>
+        <%= yield %>
+      </main>
 
-      <div class="container">
-        <footer>
-          <i id="facebook"></i>
-          <i id="twitter"></i>
-          <p><span>&#169;</span> 2017 World Museum Hoddesdon</p>
-        </footer>
-      </div>
+      <footer>
+        <i id="facebook"></i>
+        <i id="twitter"></i>
+        <p><span>&#169;</span> 2017 World Museum Hoddesdon</p>
+      </footer>
 
     </div>
 

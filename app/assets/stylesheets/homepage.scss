@@ -82,3 +82,15 @@
     }
   }
 }
+
+.about {
+  background-color: map-get($colours, black);
+  color: map-get($colours, white);
+  padding: 5rem 10rem;
+  h1 {
+    color: map-get($colours, gold);
+  }
+  h2 {
+    color: map-get($colours, monk-red);
+  }
+}

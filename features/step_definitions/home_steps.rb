@@ -1,7 +1,19 @@
-When(/^I go to the home page$/) do
+Given(/^I am on the home page$/) do
   visit '/'
 end
 
-Then(/^I should see a header$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |content|
+  expect(page).to have_content(content)
+end
+
+Then(/^I should see the image "([^"]*)"$/) do |image|
+  page.should have_xpath("//img[contains(@src, \"#{image}\")]")
+end
+
+When(/^I click on "([^"]*)"$/) do |about|
+  click_on about
+end 
+
+Then(/^I should go to the "([^"]*)" page$/) do |page_name|
+  visit "/#{page_name}"
 end
