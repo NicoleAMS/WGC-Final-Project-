@@ -7,12 +7,6 @@
   color: map-get($colours, white) !important;
   border-radius: 0 !important;
   margin-bottom: 0 !important;
-  h1 {
-    color: map-get($colours, gold) !important;
-  }
-  h2 {
-    color: map-get($colours, monk-red) !important;
-  }
   p {
     display: inline-block;
     font-size: 18px !important;
@@ -36,7 +30,6 @@
   h3 {
     text-align: center;
     padding-bottom: 2rem;
-    color: map-get($colours, monk-red);
   }
   p {
     text-align: center;
@@ -59,7 +52,6 @@
   h3 {
     margin-top: 0;
     margin-bottom: 5rem;
-    color: map-get($colours, monk-red);
     text-align: center;
   }
 }
@@ -73,9 +65,6 @@
     margin-top: 10rem;
     color: map-get($colours, gold);
   }
-  h3 {
-    color: map-get($colours, monk-red);
-  }
   p {
     &:last-child {
       margin-bottom: 10rem;
@@ -87,10 +76,4 @@
   background-color: map-get($colours, black);
   color: map-get($colours, white);
   padding: 5rem 10rem;
-  h1 {
-    color: map-get($colours, gold);
-  }
-  h2 {
-    color: map-get($colours, monk-red);
-  }
 }

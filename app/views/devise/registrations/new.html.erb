@@ -1,0 +1,43 @@
+<div class="form">
+
+  <h2 class="gold">REGISTER</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form-horizontal center"}) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="field form-group">
+      <div class="col-md-4">
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <%#= f.label :password, "Password:", class: "col-md-4 control-label" %>
+      <%# if @minimum_password_length %>
+      <!-- <em>(<%#= @minimum_password_length %> characters minimum)</em>
+      <%# end %> -->
+      <div class="col-md-4">
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password (at least 6 charcters)" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <%#= f.label :password_confirmation, "Confirm password:", class: "col-md-4 control-label" %>
+      <div class="col-md-4">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm password" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <%#= f.label :code, "Access code:", class: "col-md-4 control-label" %>
+      <div class="col-md-4">
+        <%= f.text_field :code, class: "form-control", placeholder: "Access code" %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "REGISTER", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+</div>

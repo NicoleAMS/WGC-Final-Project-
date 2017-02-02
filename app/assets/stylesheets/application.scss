@@ -3,14 +3,10 @@
 @import 'colours';
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import 'homepage.scss';
+@import 'registration.scss';
 
 body {
   font-family: 'Raleway', sans-serif !important;
-}
-
-.site-wrapper {
-  min-height: 1000px;
-  margin-bottom: -5rem;
 }
 
 header {
@@ -38,6 +34,14 @@ header {
     &:last-child {
       border-right: none;
     }
+    a:hover {
+      color: map-get($colours, gold);
+      text-decoration: none;
+    }
+    a:visited {
+      color: map-get($colours, gold);
+      text-decoration: none;     
+    }
   }
 }
 
@@ -54,4 +58,12 @@ footer {
       color: map-get($colours, monk-red);
     }
   }
+}
+
+.gold {
+  color: map-get($colours, gold) !important;
+}
+
+.red {
+  color: map-get($colours, monk-red) !important;
 }
