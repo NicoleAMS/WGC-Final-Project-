@@ -22,14 +22,6 @@ Feature: A customer visits the homepage
     When I click on "LOG IN"
     Then I should go to the "login" page 
 
-  # @poltergeist
-  # Scenario: Header logged in user  
-  #   Given sample data is loaded 
-  #     And I am logged in as "batman@cave.org"
-  #     And I am on the home page 
-  #   Then I should see "LOG OUT"
-  #   And I should not see "LOG IN"
-
   Scenario: Header logged in user  
     Given sample data is loaded 
       And I am on the "login" page
