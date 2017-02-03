@@ -14,9 +14,19 @@ module SeedData
       # User.destroy_all
 
       unless User.find_by(email: "batman@cave.org")
-        User.create!(email: "batman@cave.org", password: "123456", code: "ABC")
+        @batman = User.create!(email: "batman@cave.org", password: "123456", code: "ABC")
       end
+
+      unless User.find_by(email: "nicole@gmail.com")
+        @nicole = User.create!(email: "nicole@gmail.com", password: "123456", code: "NIC", admin_role: true)
+      end
+
+      unless User.find_by(email: "harry@gmail.com")
+        @harry = User.create!(email: "harry@gmail.com", password: "123456", code: "HAR", curator_role: true)
+      end 
 
     end 
   end 
 end 
+
+extend SeedData if ARGV.include?("db:seed")
