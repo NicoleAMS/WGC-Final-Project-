@@ -11,10 +11,10 @@ module SeedData
   def self.extended(object)
     object.instance_exec do
 
-      User.destroy_all
+      # User.destroy_all
 
       unless User.find_by(email: "batman@cave.org")
-        User.create(email: "batman@cave.org", password: "123456", code: "ABC")
+        User.create!(email: "batman@cave.org", password: "123456", code: "ABC")
       end
 
     end 

@@ -30,7 +30,6 @@ Feature: A customer visits the homepage
   #   Then I should see "LOG OUT"
   #   And I should not see "LOG IN"
 
-  @poltergeist
   Scenario: Header logged in user  
     Given sample data is loaded 
       And I am on the "login" page
@@ -38,6 +37,6 @@ Feature: A customer visits the homepage
       And I fill in "Password" with "123456"
       And I click on "Log in"
     Then I should be logged in 
-      # And I should go to the "" page
+      And I should go to the "" page
       And I should see "LOG OUT"
       And I should not see "LOG IN"
