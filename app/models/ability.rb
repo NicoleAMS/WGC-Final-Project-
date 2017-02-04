@@ -11,9 +11,13 @@ class Ability
     end
     if user.curator_role?
       # can :manage, Artefact 
+      can :manage, :all
       can :access, :rails_admin
-      can :dashboard
+      can :dashboard 
     end
+    if user.user_role?
+        can :read, :all
+    end 
     
     # Define abilities for the passed in user here. For example:
     #

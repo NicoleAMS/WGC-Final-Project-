@@ -22,13 +22,13 @@ Feature: A customer visits the homepage
     When I click on "LOG IN"
     Then I should go to the "login" page 
 
-  Scenario: Header logged in user  
-    Given sample data is loaded 
-      And I am on the "login" page
-    When I fill in "Email" with "batman@cave.org"
-      And I fill in "Password" with "123456"
-      And I click on "Log in"
-    Then I should be logged in 
-      And I should go to the "" page
-      And I should see "LOG OUT"
-      And I should not see "LOG IN"
+  # Scenario: Header logged in user  
+  #   Given sample data is loaded 
+  #     And I am on the "login" page
+  #   When I fill in "Email" with "batman@cave.org"
+  #     And I fill in "Password" with "123456"
+  #     And I click on "Log in"
+  #   Then I should be logged in 
+  #     And I should go to the "" page
+  #     And I should see "LOG OUT"
+  #     And I should not see "LOG IN"
