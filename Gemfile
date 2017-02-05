@@ -36,6 +36,8 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancancan'
 gem 'figaro'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

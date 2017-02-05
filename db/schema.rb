@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170204184508) do
+ActiveRecord::Schema.define(version: 20170205162611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,15 @@ ActiveRecord::Schema.define(version: 20170204184508) do
     t.integer  "number"
     t.string   "material"
     t.string   "technique"
-    t.string   "type"
     t.integer  "location_id"
     t.integer  "country_id"
     t.integer  "gallery_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "url"
+    t.string   "artefact_type"
+    t.integer  "start_date"
+    t.integer  "end_date"
     t.index ["country_id"], name: "index_artefacts_on_country_id", using: :btree
     t.index ["gallery_id"], name: "index_artefacts_on_gallery_id", using: :btree
     t.index ["location_id"], name: "index_artefacts_on_location_id", using: :btree
@@ -35,8 +38,8 @@ ActiveRecord::Schema.define(version: 20170204184508) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,8 +53,8 @@ ActiveRecord::Schema.define(version: 20170204184508) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
