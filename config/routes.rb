@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/about' => 'pages#about'
+
+  resources :galleries, only: [:index, :show] do  
+    resources :stories, only: [:index, :show]
+  end 
 end

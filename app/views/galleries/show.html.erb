@@ -1,0 +1,8 @@
+<div class="galleries"> 
+  <h1 class="gold"><%= @gallery.name.upcase %></h1>
+
+  <% @stories.each do |story| %>
+    <h2 class="red"><%= story.title %></h2>
+    <p><%= story.content %></p>
+  <% end %>
+</div>
