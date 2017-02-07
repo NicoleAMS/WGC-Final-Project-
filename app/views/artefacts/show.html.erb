@@ -47,7 +47,9 @@
           <% unless @artefact.location.nil? || @artefact.location == "" %>
             <%= @artefact.location.name%>,
           <% end %>
-          <%= @artefact.country.name %>
+          <%= link_to "/countries/#{@artefact.country.id}" do %>
+            <%= @artefact.country.name %>
+          <% end %>
         </p>
       <% end %>
 
@@ -59,3 +61,4 @@
     </div>
   </div>
 </div>
+

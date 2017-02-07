@@ -1,0 +1,42 @@
+<h1 class="gold">Fantastic Buddhas and where to find them</h1>
+
+<div id="googleMap" style="width:90%;height:600px;"></div>
+
+<script>
+function myMap() {
+  var lat; 
+  var lng;
+  var markers = [];
+
+  var mapProp = {
+      center: new google.maps.LatLng(22,98),
+      zoom: 4,
+      mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  <%= @countries.to_json.html_safe %>.forEach(function (country) {
+    placeMarker({id: country.id, lat: country.latitude, lng: country.longitude});
+  });
+
+  function placeMarker(latLng) {
+    var marker = new google.maps.Marker({
+      id: latLng.id,
+      position: latLng,
+      map: map,
+      draggable: false,
+      animation: google.maps.Animation.DROP
+    });
+    google.maps.event.addListener(marker, 'click', function() { 
+       console.log("I am marker " + marker.id); 
+       location.href = `/countries/${marker.id}`;
+    }); 
+    return marker; 
+    markers.push(latLng);
+  }
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcukDMKRcSp22d8C82CvR7VjQAxsFxhPw&callback=myMap"></script>
