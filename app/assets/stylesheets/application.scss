@@ -5,9 +5,17 @@
 @import 'homepage.scss';
 @import 'registration.scss';
 @import 'galleries.scss';
+@import 'artefacts.scss';
 
 body {
   font-family: 'Raleway', sans-serif !important;
+  p {
+    font-size: 16px;
+  }
+}
+
+main {
+  min-height: 750px;
 }
 
 .container {

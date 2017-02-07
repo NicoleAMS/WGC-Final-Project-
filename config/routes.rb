@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   resources :galleries, only: [:index, :show] do  
     resources :stories, only: [:index, :show]
   end 
+
+  resources :artefacts, only: [:index, :show] 
+
+  resources :countries, only: [:index, :show]
 end

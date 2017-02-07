@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205162611) do
+ActiveRecord::Schema.define(version: 20170206144050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20170205162611) do
     t.string   "artefact_type"
     t.integer  "start_date"
     t.integer  "end_date"
+    t.integer  "story_id"
     t.index ["country_id"], name: "index_artefacts_on_country_id", using: :btree
     t.index ["gallery_id"], name: "index_artefacts_on_gallery_id", using: :btree
     t.index ["location_id"], name: "index_artefacts_on_location_id", using: :btree
+    t.index ["story_id"], name: "index_artefacts_on_story_id", using: :btree
   end
 
   create_table "countries", force: :cascade do |t|

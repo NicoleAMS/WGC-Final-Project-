@@ -1,0 +1,61 @@
+<div class="galleries"> 
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="gold"><%= @artefact.name.upcase %></h1>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <%= image_tag @artefact.image_url, :class => "buddha-image" %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+
+      <% unless @artefact.description == "" %>
+        <h2 class="red">Description: </h2>
+        <p><%= @artefact.description %></p>
+      <% end %>
+
+      <% unless @artefact.start_date == "" && @artefact.end_date == "" %>
+        <h2 class="red">Date:</h2>
+        <p>
+          <% if @artefact.start_date == "" || @artefact.start_date.nil? || @artefact.end_date == "" %>
+            Circa 
+          <% end %>
+          <% unless @artefact.start_date == "" %>
+            <%= @artefact.start_date %>
+          <% end %>
+          <% unless @artefact.start_date == "" || @artefact.start_date.nil? || @artefact.end_date == "" %>
+            - 
+          <% end %>
+          <% unless @artefact.end_date == "" %>
+            <%= @artefact.end_date %>
+          <% end %>
+        </p>
+      <% end %>
+
+      <% unless @artefact.material == "" %>
+        <h2 class="red">Material:</h2>
+        <p><%= @artefact.material %></p>
+      <% end %>
+
+      <% unless @artefact.technique == "" %>
+        <h2 class="red">Method:</h2>
+        <p><%= @artefact.technique %></p>
+      <% end %>
+
+      <% unless @artefact.country == "" %>
+        <h2 class="red">Origin: </h2>
+        <p>
+          <% unless @artefact.location.nil? || @artefact.location == "" %>
+            <%= @artefact.location.name%>,
+          <% end %>
+          <%= @artefact.country.name %>
+        </p>
+      <% end %>
+
+      <h2 class="red">Gallery: </h2>
+      <%= link_to "/galleries/#{@artefact.gallery.id}" do %>
+        <p>Gallery <%= @artefact.gallery.number %>: <%= @artefact.gallery.name %></p>
+      <% end %> 
+
+    </div>
+  </div>
+</div>

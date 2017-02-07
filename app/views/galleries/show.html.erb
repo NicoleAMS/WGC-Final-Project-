@@ -4,5 +4,12 @@
   <% @stories.each do |story| %>
     <h2 class="red"><%= story.title %></h2>
     <p><%= story.content %></p>
+    <% story.artefacts.each do |artefact|%>
+      <%= link_to "/artefacts/#{artefact.id}" do %>
+        <%= image_tag artefact.image_url.versions[:thumb] %>
+      <% end %>
+    <% end %>
   <% end %>
 </div>
+
+
