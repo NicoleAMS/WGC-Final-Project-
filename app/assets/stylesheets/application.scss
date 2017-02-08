@@ -6,11 +6,19 @@
 @import 'registration.scss';
 @import 'galleries.scss';
 @import 'artefacts.scss';
+@import 'countries.scss';
 
 body {
   font-family: 'Raleway', sans-serif !important;
   p {
     font-size: 16px;
+  }
+  a {
+    color: map-get($colours, gold);
+    &:hover {
+      color: map-get($colours, monk-red);
+      text-decoration: none;
+    }
   }
 }
 
@@ -55,12 +63,16 @@ header {
       text-decoration: none;
     }
     a:visited {
-      color: map-get($colours, gold);
       text-decoration: none;     
     }
     .dropdown-menu {
       left: -10rem;
       background-color: map-get($colours, black);
+      .divider {
+        display:block; 
+        margin: 5px 20px !important;
+        overflow: hidden;
+      }
       a {
         color: map-get($colours, monk-red);
       }

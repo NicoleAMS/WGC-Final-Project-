@@ -8,3 +8,17 @@
     color: map-get($colours, white); 
   }
 }
+
+.buddha-thumbnail2 {
+  padding: 2rem;
+}
+
+.previous-gallery {
+  text-align: left;
+  padding: 5rem 10rem;
+}
+
+.next-gallery {
+  text-align: right; 
+  padding: 5rem 10rem;
+}

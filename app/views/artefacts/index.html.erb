@@ -1,0 +1,65 @@
+<div class="galleries">
+  <div class="search-heading">
+    <h1 class="gold">SEARCH ARTEFACTS BY THEIR NUMBER</h1>
+    <p>Each artefact in the exhibition will be displayed with a number next to it. This number can be used to find the artefact via the search bar below.</p>
+  </div>
+
+  <div class="col-md-3">
+    <div class="search-bar col-md-12">
+      <%= form_tag artefacts_path, method: 'get' do %>
+        <div class="search">
+          <%= text_field_tag(:search_name, nil, class: "form-control number", placeholder: "Number") %>
+          <%= submit_tag("Search", class: "btn btn-primary search-btn")%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+    <div>
+      <% if @artefacts.nil? %>
+        <div class="search-result">
+          <div class="col col-md-4">
+            <div class="result">
+              <%= link_to "/artefacts/#{@artefact.id}" do %>
+                <%= image_tag @artefact.image_url.versions[:thumb], class: "buddha-thumbnail" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        
+      <% else %>
+        <div class="search-result">
+          <% @artefacts.each do |artefact| %>
+            <div class="col-md-3">
+              <li class="buddha-thumb">
+                <%= link_to "/artefacts/#{artefact.id}" do %>
+                  <%= image_tag artefact.image_url.versions[:thumb], class: "buddha-thumbnail" %>
+                <% end %>
+              </li>
+            </div> 
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <% unless @artefacts.nil? %>
+      <div class="col-md-12 paginate">
+        <%= will_paginate @artefacts %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.buddha-thumbnail').hover(function() {
+        $(this).addClass('transition');
+ 
+    }, function() {
+        $(this).removeClass('transition');
+    });
+  });
+
+</script>

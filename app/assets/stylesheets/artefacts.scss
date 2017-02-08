@@ -3,7 +3,64 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .buddha-image {
-  min-width: 90%; 
+  min-width: 80%; 
   max-width: 100% !important;
-  margin-top: 20px;
+  margin-top: 25px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.search-heading {
+  h1, p {
+    margin-bottom: 3rem;
+  }
+}
+
+.search-bar {
+  padding-top: 20px;
+  .search-btn {
+    margin-top: 1rem;
+    background-color: map-get($colours, gold);
+    border: 2px solid map-get($colours, gold);
+    &:hover {
+      background-color: map-get($colours, monk-red);
+      border: 2px solid map-get($colours, monk-red);
+    }
+  }
+}
+
+.search-result {
+  display: inline-block;
+  margin-top: 2rem;
+  li {
+    list-style: none; 
+  }
+}
+
+.result {
+  margin-left: 60px;
+}
+
+.buddha-thumb {
+  margin-bottom: 20px;
+}
+
+.paginate {
+  text-align: center;
+  color: map-get($colours, gold);
+  a {
+    color: map-get($colours, gold);
+    &:hover {
+      color: map-get($colours, monk-red);
+    }
+  }
 }

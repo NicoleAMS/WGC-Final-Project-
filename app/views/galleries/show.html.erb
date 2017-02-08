@@ -6,10 +6,39 @@
     <p><%= story.content %></p>
     <% story.artefacts.each do |artefact|%>
       <%= link_to "/artefacts/#{artefact.id}" do %>
-        <%= image_tag artefact.image_url.versions[:thumb] %>
+        <%= image_tag artefact.image_url.versions[:thumb], class: "buddha-thumbnail2" %>
       <% end %>
     <% end %>
   <% end %>
+
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="previous-gallery">
+      <% if !@previous.ids[0].nil? %>
+        <%= link_to "< Previous Gallery", gallery_path(@previous.ids[0]) %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="next-gallery">
+      <% if !@next.ids[0].nil? %>
+        <%= link_to "Next Gallery >", gallery_path(@next.ids[0])%>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
+<script>
+  $(document).ready(function(){
+    $('.buddha-thumbnail2').hover(function() {
+        $(this).addClass('transition');
+ 
+    }, function() {
+        $(this).removeClass('transition');
+    });
+  });
+
+</script>

@@ -7,9 +7,10 @@
     <% end %>
 
   <% end %>
-</div>
 
-<div id="googleMap" style="width:90%;height:600px;"></div>
+  <div id="googleMap" class="maps" style="width:90%;height:600px;"></div>
+</div>
+  
 
 <script>
 function myMap() {
@@ -18,17 +19,16 @@ function myMap() {
   var markers = [];
 
   var mapProp = {
-      center: new google.maps.LatLng(22,98),
-      zoom: 4,
+      center: new google.maps.LatLng(<%= @country.latitude %>, <%= @country.longitude %>),
+      zoom: 5,
       mapTypeId: google.maps.MapTypeId.HYBRID
   };
 
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-  <%= @country.artefacts.to_json.html_safe %>.forEach(function (artefact) {
-    console.log(artefact);
-    placeMarker({id: artefact.id, lat: artefact.latitude, lng: artefact.longitude});
-  });
+
+  placeMarker({id: <%= @country.id %>, lat: <%= @country.latitude %>, lng: <%= @country.longitude %>});
+
 
   function placeMarker(latLng) {
     var marker = new google.maps.Marker({
@@ -36,7 +36,8 @@ function myMap() {
       position: latLng,
       map: map,
       draggable: false,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      icon: '/assets/buddha-icon.png'
     });
     google.maps.event.addListener(marker, 'click', function() { 
        console.log("I am marker " + marker.id); 

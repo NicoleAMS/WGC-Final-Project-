@@ -20,6 +20,7 @@
               <i id="main-logo"></i>
             <% end %>
           </div>
+
           <div class="col-md-8 col-sm-12">
             <ul class="menu">
               <li><%= link_to "HOME", root_url %></li>
@@ -27,13 +28,18 @@
                 <li><%= link_to "ADMIN", '/admin' %></li>
               <% end %>
               <li><%= link_to "ABOUT", about_path %></li>
-              <li>SHOP</li>
+              <li><a href="#">SHOP</a></li>
               <% if user_signed_in? %>
+
+                <li><%= link_to "SEARCH", artefacts_path %></li>
                 <li>
                   <div class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">EXPLORE<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><%= link_to "Countries", countries_path %></li>
+                      <div class="divider"></div>
+                      <li><%= link_to "Floor Plan", galleries_path %></li>
+                      <div class="divider"></div>
                       <li><%= link_to "Gallery 1: Introduction", gallery_path(Gallery.find_by(id: 2))%></li>
                       <li><%= link_to "Gallery 2: India & Thailand", gallery_path(Gallery.find_by(id: 1))%></li>
                       <li><%= link_to "Gallery 3: China", gallery_path(Gallery.find_by(id: 3))%></li>
@@ -44,12 +50,14 @@
                     </ul>
                   </div>
                 </li>
+
                 <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li><%= link_to "LOG IN", new_user_session_path %></li>
               <% end %>
             </ul>
           </div>
+
         </div>
       </header>
 

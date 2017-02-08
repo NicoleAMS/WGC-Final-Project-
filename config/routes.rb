@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :artefacts, only: [:index, :show] 
 
   resources :countries, only: [:index, :show]
+
+  get "*any", via: :all, to: "errors#not_found"
 end
