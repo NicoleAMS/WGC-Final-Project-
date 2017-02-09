@@ -1,6 +1,7 @@
 Feature: Rails admin
   Only as an admin, I should be able to visit the admin page 
 
+  @poltergeist
   Scenario: An admin visits the admin page 
     Given sample data is loaded
       And I am on the "login" page
@@ -15,7 +16,7 @@ Feature: Rails admin
     When I go to the "admin/user" page
     Then I should see "List of Users"
 
-
+  @poltergeist
   Scenario: A curator visits the admin page
     Given sample data is loaded
       And I am on the "login" page
@@ -26,6 +27,7 @@ Feature: Rails admin
       And I go to the "admin" page
     Then I should see "Site Administration"
 
+  @poltergeist
   Scenario: A user tries to visit the admin page
     Given sample data is loaded
       And I am on the "login" page

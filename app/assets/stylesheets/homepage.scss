@@ -72,8 +72,20 @@
   }
 }
 
+iframe {
+  margin: 5rem 16rem;
+  text-align: center;
+}
+
 .about {
   background-color: map-get($colours, black);
   color: map-get($colours, white);
   padding: 5rem 10rem;
+}
+
+.not-found {
+  text-align: center;
+  h1, p, img {
+    padding-bottom: 3rem;
+  }
 }

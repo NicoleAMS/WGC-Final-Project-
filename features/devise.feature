@@ -2,6 +2,7 @@ Feature: Registration - Login - Logout
   As an unregistered user, I should be able to register with valid details 
   As a registered user, I should be able to login with valid details and logout 
 
+ 
   Scenario: Registration happy path 
     Given I am on the "register" page 
       And sample data is loaded 
@@ -17,6 +18,7 @@ Feature: Registration - Login - Logout
       And I should not see "LOG IN"
       And I should not see "REGISTER"
 
+
   Scenario: Registration unhappy path - password shorter than 6 characters and not confirmed and access code not unique 
     Given I am on the "register" page 
       And sample data is loaded 
@@ -29,6 +31,7 @@ Feature: Registration - Login - Logout
     And I should see "Password confirmation doesn't match"
     And I should see "Code has already been taken"
 
+
   Scenario: Registration unhappy path - access code invalid format 
     Given I am on the "register" page 
     When I fill in "Email" with "sally@gmail.com"
@@ -37,6 +40,7 @@ Feature: Registration - Login - Logout
       And I fill in "Access code" with "A"
       And I click on "REGISTER"
     Then I should see "Code is not valid"
+
 
   Scenario: Login happy path
     Given sample data is loaded 
@@ -49,6 +53,7 @@ Feature: Registration - Login - Logout
       And I should not see "LOG IN"
       And I should not see "REGISTER"
 
+
   Scenario: Login unhappy path 
     Given sample data is loaded
       And I am on the "login" page
@@ -56,6 +61,7 @@ Feature: Registration - Login - Logout
       And I fill in "Password" with "123456"
       And I click on "Log in"
     Then I should see "Invalid Email or password."
+
 
   Scenario: Logout
     Given sample data is loaded

@@ -39,6 +39,7 @@ gem 'figaro'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'will_paginate'
+gem "rails-erd"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'tsuite'
   gem 'pry'
+  gem 'simplecov'
 end
 
 group :development do

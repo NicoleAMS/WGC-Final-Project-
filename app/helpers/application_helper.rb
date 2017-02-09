@@ -1,3 +1,5 @@
+# defines a new method which configures html classes for bootstrap
+
 module ApplicationHelper
 
   def flash_class(level)

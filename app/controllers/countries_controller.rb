@@ -1,6 +1,7 @@
 class CountriesController < ApplicationController
 
-  before_filter :authenticate_user!
+  # user should be logged in 
+  before_action :authenticate_user!
 
   def index 
     @countries = Country.all 

@@ -38,9 +38,10 @@ header {
   height: 100px;
   #main-logo {
     display: block;
-    background: image-url('museum_logo.jpg') no-repeat;
+    background: image-url('logo-museum-volkenkunde.png') no-repeat;
     height: 10rem;
-    margin-left: 15px;
+    margin-left: 2rem;
+    margin-top: 2rem;
   }
   ul {
     text-align: right;
@@ -51,10 +52,6 @@ header {
     display: inline-block;
     padding: 0.5rem 2rem;
     color: map-get($colours, gold);
-/*    border-right: 2px solid map-get($colours, monk-red);
-    &:last-child {
-      border-right: none;
-    }*/
     a {
       color: map-get($colours, gold);
     }
@@ -100,14 +97,14 @@ footer {
   background-color: map-get($colours, light-gold) !important;
   border-color: map-get($colours, light-gold) !important;
   margin-bottom: 0 !important; 
-  width: 50%;
+  width: 30%;
 }
 
 .alert-danger {
   color: map-get($colours, monk-red) !important;
   order-color: map-get($colours, monk-red) !important;
   margin-bottom: 0 !important; 
-  width: 50%;
+  width: 30%;
 }
 
 .gold {

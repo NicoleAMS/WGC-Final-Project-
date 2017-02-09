@@ -58,6 +58,11 @@
         <p>Gallery <%= @artefact.gallery.number %>: <%= @artefact.gallery.name %></p>
       <% end %> 
 
+      <h2 class="red">Source: </h2>
+      <%= link_to "#{@artefact.url}" do %>
+        <p>"The Buddha" Exhibition, Museum Volkenkunde, Leiden, The Netherlands</p>
+      <% end %>
+
     </div>
   </div>
 </div>

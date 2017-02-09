@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
@@ -16,7 +17,7 @@
       <header>
         <div class="row">
           <div class="col-md-4 col-sm-12">
-            <%= link_to root_url, class: "logo" do %>
+            <%= link_to "https://volkenkunde.nl/en", class: "logo" do %>
               <i id="main-logo"></i>
             <% end %>
           </div>
@@ -87,7 +88,7 @@
       <footer>
         <i id="facebook"></i>
         <i id="twitter"></i>
-        <p><span>&#169;</span> 2017 World Museum Hoddesdon</p>
+        <p><span>&#169;</span> Nicole Sentis 2017</p>
       </footer>
 
     </div>
