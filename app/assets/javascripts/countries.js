@@ -33,5 +33,3 @@
 //     return marker; 
 //     markers.push(latLng);
 //   }
-
-}
