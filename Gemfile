@@ -40,6 +40,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'will_paginate'
 gem "rails-erd"
+gem "fog"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

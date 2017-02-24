@@ -22,7 +22,7 @@
           <div class="col col-md-4">
             <div class="result">
               <%= link_to "/artefacts/#{@artefact.id}" do %>
-                <%= image_tag @artefact.image_url.versions[:thumb], class: "buddha-thumbnail" %>
+                <%= image_tag @artefact.image_url.thumb, class: "buddha-thumbnail" %>
               <% end %>
             </div>
           </div>
@@ -34,7 +34,7 @@
             <div class="col-md-3">
               <li class="buddha-thumb">
                 <%= link_to "/artefacts/#{artefact.id}" do %>
-                  <%= image_tag artefact.image_url.versions[:thumb], class: "buddha-thumbnail" %>
+                  <%= image_tag artefact.image_url.thumb, class: "buddha-thumbnail" %>
                 <% end %>
               </li>
             </div> 
