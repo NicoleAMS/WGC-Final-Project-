@@ -24,3 +24,4 @@
 /config/application.yml
 /config/secrets.yml 
 /config/initializers/s3.rb
+/config/initializers/devise.rb
