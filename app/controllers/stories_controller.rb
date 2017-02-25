@@ -6,9 +6,9 @@ class StoriesController < ApplicationController
     @stories = Gallery.find(params[:gallery_id]).stories 
   end 
 
-  # def show
-  #   @story = Story.find_by(id: params[:id])
-  # end 
+  def show
+    @story = Story.find_by(id: params[:id])
+  end 
 
 end
 
