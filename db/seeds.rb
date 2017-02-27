@@ -25,6 +25,10 @@ module SeedData
         @harry = User.create!(email: "harry@gmail.com", password: "123456", code: "HAR", curator_role: true)
       end 
 
+      unless Gallery.find_by(number: 29)
+        @india = Gallery.create!(number: 29, name: "Vietnam")
+      end 
+
     end 
   end 
 end 
