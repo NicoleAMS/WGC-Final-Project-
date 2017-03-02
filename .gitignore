@@ -23,6 +23,6 @@
 # Ignore application configuration
 /config/application.yml
 /config/initializers/s3.rb
-/config/initializers/devise.rb
 /config/secrets.yml 
+/config/initializers/devise.rb
 museum.sql
