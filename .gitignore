@@ -21,8 +21,8 @@
 .byebug_history
 
 # Ignore application configuration
-# /config/application.yml
-# /config/initializers/s3.rb
-# /config/secrets.yml 
-# /config/initializers/devise.rb
+/config/application.yml
+/config/initializers/s3.rb
+/config/secrets.yml 
+/config/initializers/devise.rb
 museum.sql
