@@ -8,14 +8,17 @@ class Ability
       can :manage, :all
       can :access, :rails_admin
       can :dashboard
+      can :import, :all
     end
     if user.curator_role?
       can :manage, :all
       can :access, :rails_admin
       can :dashboard 
+      cannot :import, :all
     end
     if user.user_role?
         can :read, :all
+        cannot :import, :all
     end 
     
  
