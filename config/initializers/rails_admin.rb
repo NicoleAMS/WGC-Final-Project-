@@ -31,4 +31,43 @@ RailsAdmin.config do |config|
     show_in_app
     import 
   end
+
+  config.model 'User' do
+    import do
+      include_all_fields
+      mapping_key :email
+    end
+  end
+
+  config.model 'Artefact' do
+    import do
+      include_all_fields
+    end
+  end
+
+  config.model 'Story' do
+    import do
+      include_all_fields
+
+    end
+  end
+
+  config.model 'Gallery' do
+    import do
+      include_all_fields
+      mapping_key :title
+    end
+  end
+
+  config.model 'Country' do
+    import do
+      include_all_fields
+    end
+  end
+
+  config.model 'Location' do
+    import do
+      include_all_fields
+    end
+  end
 end
