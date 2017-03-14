@@ -475,7 +475,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-erd
   rails_admin
-  rails_admin_import (~> 1.2)
+  rails_admin_import
   sass-rails (~> 5.0)
   simplecov
   spring
