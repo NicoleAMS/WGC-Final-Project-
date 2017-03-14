@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount RailsAdminImport::Engine => '/rails_admin_import', :as => 'rails_admin_import'
+  mount RailsAdminImport::Engine => '/import', :as => 'rails_admin_import'
 
   #  path_names: {} removes the 'users/' namespace before all the routes and renames sign_in, sign_out, 
   #  sign_up to login, logout, register 
