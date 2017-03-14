@@ -29,5 +29,6 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    import 
   end
 end
