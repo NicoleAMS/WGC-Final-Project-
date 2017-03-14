@@ -41,6 +41,7 @@ gem 'mini_magick'
 gem 'will_paginate'
 gem "rails-erd"
 gem "fog"
+gem "rails_admin_import", "~> 1.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
