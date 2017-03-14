@@ -29,19 +29,6 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-    import 
   end
 
-  config.model 'User' do
-    import do
-      include_all_fields
-      mapping_key :email
-    end
-  end
-
-  config.model 'Story' do
-    include_all_fields
-    mapping_key :title 
-  end 
-  
 end
