@@ -81,9 +81,9 @@ test:
 
 production:
   <<: *default
-  # database: thebuddha_production
-  # username: thebuddha
-  # password: <%= ENV['THEBUDDHA_DATABASE_PASSWORD'] %>
+  database: thebuddha_production
+  username: thebuddha
+  password: <%= ENV['THEBUDDHA_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
 
 
