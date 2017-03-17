@@ -44,12 +44,12 @@ module SeedData
         @myanmar = Gallery.create!(number: 6, name: "Myanmar")
       end 
       unless Gallery.find_by(number: 7)
-        @japan = Gallery.create!(number: 29, name: "Japan & Tibet")
+        @japan = Gallery.create!(number: 7, name: "Japan & Tibet")
       end 
 
       # STORIES
       unless Story.find_by(title: "The Buddha")
-        @story1 = Story.create!(title: "The Buddha", content: "The Buddha must have been an inspiring teacher who captivated his audience. After his death his pupils continued to spread his words. They were written down several centuries later. Many Buddhist texts therefore begin with the words: ‘Thus I have heard’. The Buddha’s teachings quickly attracted growing numbers of followers. From the third century BC Buddhism began to spread, first to large parts of Asia and eventually also to other parts of the world. Buddhism has changed over time. There are now many different strands of Buddhism, and each region has its own traditions. They all however subscribe to the key role of the Buddha. His life story is essential. According to the texts, he told the story himself. Whatever its grounding in history, people have been passing on, rewriting and republishing the story for centuries, because they deemed it valuable. This exhibition shows how the life story of the Buddha has continued to inspire people in different countries and regions. It encompasses not only the Buddha’s life, but also his many previous lives and the relics that perpetuate his life even after his death.", gallery_id: 1)
+        @story1 = Story.create!(title: "The Buddha", content: "The Buddha must have been an inspiring teacher who captivated his audience. After his death his pupils continued to spread his words. They were written down several centuries later. Many Buddhist texts therefore begin with the words: ‘Thus I have heard’. The Buddha’s teachings quickly attracted growing numbers of followers. From the third century BC Buddhism began to spread, first to large parts of Asia and eventually also to other parts of the world. Buddhism has changed over time. There are now many different strands of Buddhism, and each region has its own traditions. They all however subscribe to the key role of the Buddha. His life story is essential. According to the texts, he told the story himself. Whatever its grounding in history, people have been passing on, rewriting and republishing the story for centuries, because they deemed it valuable. This exhibition shows how the life story of the Buddha has continued to inspire people in different countries and regions. It encompasses not only the Buddha’s life, but also his many previous lives and the relics that perpetuate his life even after his death.", gallery_id: @introduction.id)
       end 
 
     end 
