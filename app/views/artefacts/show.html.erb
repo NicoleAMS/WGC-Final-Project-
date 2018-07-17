@@ -1,4 +1,4 @@
-<div class="galleries"> 
+<div class="galleries">
   <div class="row">
     <div class="col-md-12">
       <h1 class="gold"><%= @artefact.name.upcase %></h1>
@@ -9,21 +9,21 @@
     <div class="col-md-6 col-sm-12">
 
       <% unless @artefact.description == "" %>
-        <h2 class="red">Description: </h2>
+        <h2 class="red title">Description: </h2>
         <p><%= @artefact.description %></p>
       <% end %>
 
       <% unless @artefact.start_date == "" && @artefact.end_date == "" %>
-        <h2 class="red">Date:</h2>
+        <h2 class="red title">Date:</h2>
         <p>
           <% if @artefact.start_date == "" || @artefact.start_date.nil? || @artefact.end_date == "" %>
-            Circa 
+            Circa
           <% end %>
           <% unless @artefact.start_date == "" %>
             <%= @artefact.start_date %>
           <% end %>
           <% unless @artefact.start_date == "" || @artefact.start_date.nil? || @artefact.end_date == "" %>
-            - 
+            -
           <% end %>
           <% unless @artefact.end_date == "" %>
             <%= @artefact.end_date %>
@@ -32,17 +32,17 @@
       <% end %>
 
       <% unless @artefact.material == "" %>
-        <h2 class="red">Material:</h2>
+        <h2 class="red title">Material:</h2>
         <p><%= @artefact.material %></p>
       <% end %>
 
       <% unless @artefact.technique == "" %>
-        <h2 class="red">Method:</h2>
+        <h2 class="red title">Method:</h2>
         <p><%= @artefact.technique %></p>
       <% end %>
 
       <% unless @artefact.country == "" %>
-        <h2 class="red">Origin: </h2>
+        <h2 class="red title">Origin: </h2>
         <p>
           <% unless @artefact.location.nil? || @artefact.location == "" %>
             <%= @artefact.location.name%>,
@@ -53,12 +53,12 @@
         </p>
       <% end %>
 
-      <h2 class="red">Gallery: </h2>
+      <h2 class="red title">Gallery: </h2>
       <%= link_to "/galleries/#{@artefact.gallery.id}" do %>
         <p>Gallery <%= @artefact.gallery.number %>: <%= @artefact.gallery.name %></p>
-      <% end %> 
+      <% end %>
 
-      <h2 class="red">Source: </h2>
+      <h2 class="red title">Source: </h2>
       <%= link_to "#{@artefact.url}" do %>
         <p>"The Buddha" Exhibition, Museum Volkenkunde, Leiden, The Netherlands</p>
       <% end %>

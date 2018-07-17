@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .galleries {
-  padding: 5rem 10rem; 
+  padding: 5rem 10rem;
   p {
-    color: map-get($colours, white); 
+    color: map-get($colours, white);
   }
 }
 
@@ -19,6 +19,6 @@
 }
 
 .next-gallery {
-  text-align: right; 
+  text-align: right;
   padding: 5rem 10rem;
 }
