@@ -1,5 +1,7 @@
-<div class="galleries"> 
+<div class="galleries">
   <h1 class="gold"><%= @country.name.upcase %></h1>
+
+  <p><%= @country.description %></p>
 
   <% @artefacts.each do |artefact| %>
     <%= link_to "/artefacts/#{artefact.id}" do %>
@@ -10,42 +12,21 @@
 
   <div id="googleMap" class="maps" style="width:90%;height:600px;"></div>
 </div>
-  
+
 
 <script>
 function myMap() {
-  var lat; 
+  var lat;
   var lng;
   var markers = [];
 
   var mapProp = {
       center: new google.maps.LatLng(<%= @country.latitude %>, <%= @country.longitude %>),
-      zoom: 5,
+      zoom: 6,
       mapTypeId: google.maps.MapTypeId.HYBRID
   };
 
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
-  placeMarker({id: <%= @country.id %>, lat: <%= @country.latitude %>, lng: <%= @country.longitude %>});
-
-
-  function placeMarker(latLng) {
-    var marker = new google.maps.Marker({
-      id: latLng.id,
-      position: latLng,
-      map: map,
-      draggable: false,
-      animation: google.maps.Animation.DROP,
-      icon: '/assets/buddha-icon.png'
-    });
-    google.maps.event.addListener(marker, 'click', function() { 
-       console.log("I am marker " + marker.id); 
-       location.href = `/artefacts/${marker.id}`;
-    }); 
-    return marker; 
-    markers.push(latLng);
-  }
 
 }
 </script>
