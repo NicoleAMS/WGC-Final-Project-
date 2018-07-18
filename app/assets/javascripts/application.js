@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var menuSlide = function() {
+  $('.icon-hamburger').click(function() {
+    $('nav').animate({
+      top:'-120px'
+    }, 200),
+    $('body div.container').animate({
+      top: '120px'
+    }, 200);
+  });
+
+  $('.icon-close').click(function() {
+    $('nav').animate({
+      top: '-450px'
+    }, 200);
+  });
+
+  $('.dropdown').click(function() {
+    $('nav').toggleClass('exploreHeight');
+  });
+};
+
+$(document).ready(menuSlide);

@@ -48,7 +48,7 @@
   background-color: map-get($colours, black);
   .carousel-indicators {
     bottom: -30px;
-  } 
+  }
   h3 {
     margin-top: 0;
     margin-bottom: 5rem;
@@ -72,9 +72,20 @@
   }
 }
 
-iframe {
-  margin: 5rem 16rem;
-  text-align: center;
+.iframe_wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  width: 90%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .about {

@@ -43,9 +43,13 @@ header {
     margin-left: 2rem;
     margin-top: 2rem;
   }
-  ul {
+  .icon-hamburger, .icon-close {
+    display: none;
+  }
+  ul.menu {
     text-align: right;
     margin-top: 1.4rem;
+    padding-left: 0;
   }
   li {
     text-decoration: none;
@@ -60,13 +64,13 @@ header {
       text-decoration: none;
     }
     a:visited {
-      text-decoration: none;     
+      text-decoration: none;
     }
     .dropdown-menu {
       left: -10rem;
       background-color: map-get($colours, black);
       .divider {
-        display:block; 
+        display:block;
         margin: 5px 20px !important;
         overflow: hidden;
       }
@@ -96,14 +100,14 @@ footer {
   color: map-get($colours, gold) !important;
   background-color: map-get($colours, light-gold) !important;
   border-color: map-get($colours, light-gold) !important;
-  margin-bottom: 0 !important; 
+  margin-bottom: 0 !important;
   width: 30%;
 }
 
 .alert-danger {
   color: map-get($colours, monk-red) !important;
   order-color: map-get($colours, monk-red) !important;
-  margin-bottom: 0 !important; 
+  margin-bottom: 0 !important;
   width: 30%;
 }
 
@@ -113,4 +117,60 @@ footer {
 
 .red {
   color: map-get($colours, monk-red) !important;
+}
+
+.exploreHeight {
+  height: 650px;
+}
+
+@media screen and (max-width: 991px) {
+
+  header .icon-hamburger, header .icon-close {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 36px;
+    z-index: 1;
+  }
+  .row.header-row {
+    margin-right: 15px;
+  }
+  nav {
+    background-color: map-get($colours, gold);
+    position: absolute;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    top: -450px;
+    right: 15px;
+    left: 15px;
+    /*margin-top: -125px;*/
+    ul {
+      margin-top: 14px !important;
+      li {
+        width: 100%;
+        text-align: center;
+      }
+      li a:hover {
+        color: white;
+      }
+      li a {
+        color: black;
+      }
+      .menu-item {
+        font-size: 18px;
+        padding: 10px;
+        list-style: none !important;
+      }
+    }
+  }
+  header li .dropdown-menu {
+    left: 0;
+    li {
+      font-size: 20px;
+    }
+  }
 }
