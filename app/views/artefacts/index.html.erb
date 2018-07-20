@@ -4,7 +4,7 @@
     <p>Each artefact in the exhibition will be displayed with a number next to it. This number can be used to find the artefact via the search bar below.</p>
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-12">
     <div class="search-bar col-md-12">
       <%= form_tag artefacts_path, method: 'get' do %>
         <div class="search">
@@ -15,11 +15,11 @@
     </div>
   </div>
 
-  <div class="col-md-9">
+  <div class="col-md-9 col-sm-12">
     <div>
       <% if @artefacts.nil? %>
         <div class="search-result">
-          <div class="col col-md-4">
+          <div class="col col-md-4 col-sm-12">
             <div class="result">
               <%= link_to "/artefacts/#{@artefact.id}" do %>
                 <%= image_tag @artefact.image_url.thumb, class: "buddha-thumbnail" %>
@@ -27,17 +27,17 @@
             </div>
           </div>
         </div>
-        
+
       <% else %>
         <div class="search-result">
           <% @artefacts.each do |artefact| %>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-4 col-xs-12">
               <li class="buddha-thumb">
                 <%= link_to "/artefacts/#{artefact.id}" do %>
                   <%= image_tag artefact.image_url.thumb, class: "buddha-thumbnail" %>
                 <% end %>
               </li>
-            </div> 
+            </div>
           <% end %>
         </div>
       <% end %>
@@ -56,7 +56,7 @@
   $(document).ready(function(){
     $('.buddha-thumbnail').hover(function() {
         $(this).addClass('transition');
- 
+
     }, function() {
         $(this).removeClass('transition');
     });

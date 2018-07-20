@@ -15,14 +15,15 @@
 //= require turbolinks
 //= require_tree .
 
+
 var menuSlide = function() {
   $('.icon-hamburger').click(function() {
     $('nav').animate({
       top:'-120px'
-    }, 200),
-    $('body div.container').animate({
-      top: '120px'
     }, 200);
+    // $('body div.container').animate({
+    //   top: '120px'
+    // }, 200);
   });
 
   $('.icon-close').click(function() {
@@ -30,10 +31,27 @@ var menuSlide = function() {
       top: '-450px'
     }, 200);
   });
+};
 
-  $('.dropdown').click(function() {
-    $('nav').toggleClass('exploreHeight');
+var exploreSlide = function() {
+  $('.dropdown').on("hide.bs.dropdown", function() {
+    $('nav').removeClass('exploreHeight');
   });
+  if ($("header .icon-hamburger").css("display") !== "none") {
+    $('.dropdown').on("show.bs.dropdown", function() {
+      $('nav').addClass('exploreHeight');
+    });
+  } else {
+    $('.dropdown').on("show.bs.dropdown", function() {
+      $('nav').removeClass('exploreHeight');
+    });
+  }
 };
 
 $(document).ready(menuSlide);
+$(document).ready(exploreSlide);
+
+$(window).resize(function() {
+  exploreSlide();
+});
+

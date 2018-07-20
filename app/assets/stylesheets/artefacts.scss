@@ -70,3 +70,10 @@ h2.title {
   font-size: 18px;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 991px) {
+  .search-bar {
+    max-width: 200px;
+    margin: auto 0;
+  }
+}
