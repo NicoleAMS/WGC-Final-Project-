@@ -74,7 +74,7 @@ module SeedData
       end
 
       # ARTEFACTS
-        @artefact1 = Artefact.create(name: Buddha, story_id: @story1.id)
+        @artefact1 = Artefact.create(name: 'Buddha', story_id: @story1.id)
 
     end
   end
