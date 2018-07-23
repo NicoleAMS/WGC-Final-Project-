@@ -2,9 +2,9 @@ class GalleriesController < ApplicationController
 
   before_action :authenticate_user!
 
-  def index 
-    @galleries = Gallery.all 
-  end 
+  def index
+    @galleries = Gallery.all
+  end
 
   def show
     @gallery = Gallery.find_by(id: params[:id])
@@ -16,13 +16,13 @@ class GalleriesController < ApplicationController
     @gallery6 = Gallery.find_by(id: 6)
     @gallery7 = Gallery.find_by(id: 7)
 
-    # all stories that belong to the gallery 
+    # all stories that belong to the gallery
     @stories = @gallery.stories.sort_by{|story| story[:id]}
 
-    # for navigating to previous and next gallery 
+    # for navigating to previous and next gallery
     @previous = Gallery.where(number: (@gallery.number - 1))
     @next = Gallery.where(number: (@gallery.number + 1))
-  end 
+  end
 
 end
 

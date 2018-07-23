@@ -11,6 +11,11 @@ module SeedData
   def self.extended(object)
     object.instance_exec do
 
+      User.destroy_all
+      Artefact.destroy_all
+      Story.destroy_all
+      Gallery.destroy_all
+
       # USERS
       unless User.find_by(email: "batman@cave.org")
         @batman = User.create!(email: "batman@cave.org", password: "123456", code: "ABC")
@@ -67,24 +72,9 @@ module SeedData
       unless Story.find_by(title: "Places of pilgrimage")
         @story7 = Story.create!(gallery_id: @introduction.id, title: "Places of pilgrimage", content: "As the Buddha lay on his deathbed one of his pupils asked how he could honour him when he was gone. The Buddha answered that there were four places believers could visit: Lumbini, his birthplace; Bodhgaya, the place where he achieved enlightenment; Sarnath, the place where he delivered his first sermon, setting the wheels of Buddhist teaching in motion; and Kushinagara, where he died and attained parinirvana. Visiting these places would earn them merit, punya, and lead to a good reincarnation. Four other places also became important: Shravasti, where the Buddha performed his miracles; Rajagriha, where he tamed a ferocious elephant; Sankashya, where he returned to earth after visiting heaven; and Vaishali, where a monkey offered him honey. Although there are many more places that attract pilgrims, these eight are an important group. The number of Buddhists making pilgrimages has increased in recent times, due to globalisation and the ease of air travel.")
       end
-      # unless Story.find_by(title: "")
-      #   @story8 = Story.create!(title:, content: )
-      # end
-      # unless Story.find_by(title: "")
-      #   @story9 = Story.create!(title:, content: )
-      # end
-      # unless Story.find_by(title: "")
-      #   @story10 = Story.create!(title:, content: )
-      # end
-      # unless Story.find_by(title: "")
-      #   @story11 = Story.create!(title:, content: )
-      # end
-      # unless Story.find_by(title: "")
-      #   @story12 = Story.create!(title:, content: )
-      # end
-      # unless Story.find_by(title: "")
-      #   @story13 = Story.create!(title:, content: )
-      # end
+
+      # ARTEFACTS
+        @artefact1 = Artefact.create(title :Buddha, story_id: @story1.id)
 
     end
   end

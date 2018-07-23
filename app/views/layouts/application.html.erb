@@ -51,14 +51,16 @@
                             <li><%= link_to "Countries", countries_path %></li>
       <!--                       <div class="divider"></div>
                             <li><%= link_to "Floor Plan", galleries_path %></li> -->
-                            <div class="divider"></div>
-                            <li><%= link_to "Gallery 1: Introduction", gallery_path(Gallery.find_by(id: 1))%></li>
-                            <li><%= link_to "Gallery 2: India & Thailand", gallery_path(Gallery.find_by(id: 2))%></li>
-                            <li><%= link_to "Gallery 3: China", gallery_path(Gallery.find_by(id: 3))%></li>
-                            <li><%= link_to "Gallery 4: Jewels & Gandhara art", gallery_path(Gallery.find_by(id: 4))%></li>
-                            <li><%= link_to "Gallery 5: Indonesia & Sri Lanka", gallery_path(Gallery.find_by(id: 5))%></li>
-                            <li><%= link_to "Gallery 6: Myanmar", gallery_path(Gallery.find_by(id: 6))%></li>
-                            <li><%= link_to "Gallery 7: Japan & Tibet", gallery_path(Gallery.find_by(id: 7))%></li>
+                            <% unless Gallery.all.nil? %>
+                              <div class="divider"></div>
+                              <li><%= link_to "Gallery 1: Introduction", gallery_path(Gallery.find_by(id: 1))%></li>
+                              <li><%= link_to "Gallery 2: India & Thailand", gallery_path(Gallery.find_by(id: 2))%></li>
+                              <li><%= link_to "Gallery 3: China", gallery_path(Gallery.find_by(id: 3))%></li>
+                              <li><%= link_to "Gallery 4: Jewels & Gandhara art", gallery_path(Gallery.find_by(id: 4))%></li>
+                              <li><%= link_to "Gallery 5: Indonesia & Sri Lanka", gallery_path(Gallery.find_by(id: 5))%></li>
+                              <li><%= link_to "Gallery 6: Myanmar", gallery_path(Gallery.find_by(id: 6))%></li>
+                              <li><%= link_to "Gallery 7: Japan & Tibet", gallery_path(Gallery.find_by(id: 7))%></li>
+                            <% end %>
                           </ul>
                         </div>
                       </li>
